@@ -17,7 +17,7 @@ public:
 	{
 		Mat hsv, hue;
 		getHue(image,hsv,hue);
-        inRange(hsv, Scalar(0, smin, vmin),Scalar(180, 256, vmax), mask);        
+        inRange(hsv, Scalar(0, smin, vmin),Scalar(180, smax, vmax), mask);        
         Mat roi(hue, selection), maskroi(mask, selection);
         hsize = 16;
     	hranges[0] = 0;
@@ -30,7 +30,7 @@ public:
 	{
 		Mat hsv, hue;
 		getHue(image,hsv,hue,channel);
-        inRange(hsv, Scalar(0, smin, vmin),Scalar(180, 256, vmax), mask);        
+        inRange(hsv, Scalar(0, smin, vmin),Scalar(180, smax, vmax), mask);        
         Mat roi(hue, selection), maskroi(mask, selection);
         hsize = 16;
     	hranges[0] = 0;

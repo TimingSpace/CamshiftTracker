@@ -16,7 +16,7 @@ int main()
 	InitialRect intialRect=InitialRect();
 	Rect toTrack= intialRect.getInitialRect(img);
 	//initial the trackor
-	CamShiftTracking trackor(img,0,255,0,255,toTrack);
+	CamShiftTracking trackor(img,32,255,60,200,toTrack);
 	//track
 	while(1)
 	{
